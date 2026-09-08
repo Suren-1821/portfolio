@@ -10,6 +10,8 @@ import Education from "./components/Education.jsx";
 import Blog from "./components/Blog.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import Contact from "./components/Contact.jsx";
+import WhatsAppFAB from "./components/WhatsAppFAB.jsx";
+import ScrollProgress from "./components/ScrollProgress.jsx";
 import { fetchPortfolio } from "./api.js";
 
 export default function App() {
@@ -36,6 +38,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <Hero profile={data.profile} />
       <Stats stats={data.stats} />
@@ -47,6 +50,7 @@ export default function App() {
       <Testimonials data={data.testimonials} />
       <Education education={data.education} />
       <Contact profile={data.profile} />
+      <WhatsAppFAB phone={data.profile.phone} />
     </>
   );
 }

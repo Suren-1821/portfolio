@@ -45,6 +45,9 @@ export default function Contact({ profile }) {
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             <span className="k">LINKEDIN</span> /in/surendar-r1821
           </a>
+          <a href={`https://wa.me/${profile.phone.replace(/\D/g, "")}`} target="_blank" rel="noopener noreferrer">
+            <span className="k">WHATSAPP</span> Chat with me
+          </a>
           <span>
             <span className="k">LOCATION</span> {profile.location}
           </span>
