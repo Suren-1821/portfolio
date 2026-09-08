@@ -12,6 +12,7 @@ import Testimonials from "./components/Testimonials.jsx";
 import Contact from "./components/Contact.jsx";
 import WhatsAppFAB from "./components/WhatsAppFAB.jsx";
 import ScrollProgress from "./components/ScrollProgress.jsx";
+import Spinner from "./components/Spinner.jsx";
 import { fetchPortfolio } from "./api.js";
 
 export default function App() {
@@ -33,7 +34,7 @@ export default function App() {
   }
 
   if (!data) {
-    return <div className="load-state">Loading portfolio…</div>;
+    return <Spinner />;
   }
 
   return (

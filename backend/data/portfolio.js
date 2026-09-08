@@ -62,25 +62,29 @@ export const experience = [
 
 export const projects = [
   {
-    name: "Hollywood Film Company (HFC)",
-    description:
-      "Inventory and workflow platform managing 5,000+ production assets, work orders, location tracking, and customer workflows for a US-based film production company.",
+    name: "HFC",
+    description: "HFC is an enterprise platform for managing film distribution, inventory, fulfillment, work orders, and theatre-related operations. The platform supports end-to-end workflows for managing film assets, requests, bookings, inventory availability, allocation, logistics, and fulfillment. The system includes complex business rules for asset availability, booking validation, work order management, and inventory tracking. The platform also integrates external enterprise services to streamline operational and financial workflows.",
+    role: "Full Stack Developer responsible for developing React/TypeScript frontend features, Node.js REST APIs, PostgreSQL database operations, inventory and fulfillment workflows, work orders, booking validation, business logic, API integrations, production troubleshooting, and application optimization.",
+    skills: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "AG Grid", "REST APIs", "SQL", "JSONB", "API Integration"]
   },
   {
-    name: "Cinebridge",
-    description:
-      "Multi-tenant cinema operations platform with booking, scheduling, e-signatures, reporting, and role-based access control.",
+    name: "CineBridge",
+    description: "CineBridge is an enterprise film distribution and asset management platform designed to manage requests, bookings, inventory, work orders, asset allocation, scheduling, and fulfillment operations. The platform enables users to track film assets throughout their operational lifecycle while maintaining accurate inventory availability and booking information. Implemented transactional APIs and business workflows involving multiple entities.",
+    role: "Full Stack Developer responsible for Request Management, Booking Management, inventory allocation, scheduling, conflict resolution, fulfillment workflows, REST API development, PostgreSQL transactions and JSONB data management, and third-party integrations including QuickBooks, DocuSign, FedEx, and Zebra.",
+    skills: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "AG Grid", "QuickBooks API", "DocuSign API", "FedEx API", "Zebra Barcode", "OAuth 2.0"]
   },
   {
     name: "RAK Sportz",
-    description:
-      "Scalable tournament management APIs supporting players, coaches, academies, and teams, with improved database performance.",
+    description: "RAK Sportz is a sports-focused application supported by a backend architecture designed to manage application data and business workflows efficiently. The system handles business logic, data processing, validation, CRUD operations, and database interactions. MySQL was used for structured data management, with optimized queries supporting reliable and efficient data retrieval and updates.",
+    role: "Backend Developer responsible for Node.js backend development, REST API implementation, business logic, MySQL database operations, CRUD functionality, data validation, query optimization, API integration, debugging, and backend performance improvements.",
+    skills: ["Node.js", "JavaScript", "MySQL", "REST APIs", "SQL", "CRUD", "Business Logic", "Data Validation", "Query Optimization"]
   },
   {
-    name: "Hyperloop",
-    description:
-      "Reusable React components integrated with real-time trading APIs for portfolio tracking and transaction management.",
-  },
+    name: "OneConnect HRMS",
+    description: "OneConnect HRMS is a modular enterprise Human Resource Management System built using React 19, Vite Module Federation, FastAPI, Python, TypeScript, and PostgreSQL. The modular architecture enables HR modules to be developed and deployed independently while maintaining a unified application experience. The system supports employee attendance tracking, timesheet submission and approval, authentication, workflow management, and automated notifications.",
+    role: "Full Stack Developer responsible for the Timesheet module and owner of Attendance and Authentication. Developed React/TypeScript interfaces, FastAPI REST APIs, PostgreSQL operations, timesheet submission and approval workflows, attendance functionality, authentication workflows, validations, automated email notifications, debugging, and production support.",
+    skills: ["React 19", "TypeScript", "Python", "FastAPI", "PostgreSQL", "Vite", "Module Federation", "Authentication", "Email Automation"]
+  }
 ];
 
 export const education = [
