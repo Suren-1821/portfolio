@@ -22,9 +22,7 @@ export default function Projects({ projects }) {
 
   return (
     <section className="wrap" id="projects">
-      <Reveal className="eyebrow">
-        <span className="method get">GET</span> /projects
-      </Reveal>
+
       <Reveal as="h2">Selected work</Reveal>
       <Reveal as="p" className="section-sub">
         Production systems developed across various enterprise domains.

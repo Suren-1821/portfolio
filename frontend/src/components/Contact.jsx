@@ -26,9 +26,7 @@ export default function Contact({ profile }) {
 
   return (
     <footer className="wrap" id="contact">
-      <Reveal className="eyebrow">
-        <span className="method post">POST</span> /contact
-      </Reveal>
+
       <Reveal as="h2">Let's build something.</Reveal>
       <Reveal as="p" className="section-sub">
         Open to full-stack, React, and Node.js roles — happy to walk through any of the projects above in more depth.

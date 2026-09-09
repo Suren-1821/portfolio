@@ -32,8 +32,7 @@ export default function Terminal({ profile }) {
   const startedFor = useRef(null);
 
   useEffect(() => {
-    if (!profile || startedFor.current === profile.name) return;
-    startedFor.current = profile.name;
+    if (!profile) return;
 
     const lines = buildLines(profile);
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

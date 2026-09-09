@@ -5,7 +5,6 @@ export default function Spinner() {
         <div className="spinner-circle"></div>
         <div className="spinner-circle inner"></div>
       </div>
-      <div className="spinner-text">Loading portfolio...</div>
     </div>
   );
 }

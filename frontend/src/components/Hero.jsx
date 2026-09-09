@@ -23,6 +23,12 @@ export default function Hero({ profile }) {
           <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             View LinkedIn
           </a>
+          <a className="btn btn-ghost" href="/Surendar_R_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
+          <a className="btn btn-ghost" href="/Surendar_R_Resume.pdf" download="Surendar_R_Resume.pdf">
+            Download Resume
+          </a>
         </div>
       </div>
 

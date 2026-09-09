@@ -4,9 +4,7 @@ export default function Experience({ experience }) {
   if (!experience || experience.length === 0) return null;
   return (
     <section className="wrap" id="experience">
-      <Reveal className="eyebrow">
-        <span className="method get">GET</span> /experience
-      </Reveal>
+
       <Reveal as="h2">Experience</Reveal>
 
       {experience.map((job) => (

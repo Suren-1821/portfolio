@@ -6,9 +6,7 @@ export default function Blog({ data }) {
   return (
     <section id="blog">
       <div className="wrap">
-        <div className="eyebrow">
-          <span className="method get">GET</span>
-          <span>/api/blog</span>
+        <div className="eyebrow" style={{ display: 'none' }}>
         </div>
         <h2>Technical Writing</h2>
         <p className="section-sub">
@@ -17,8 +15,7 @@ export default function Blog({ data }) {
         
         <div className="proj-grid">
           {data.map((post, i) => (
-            <motion.a
-              href={post.url}
+            <motion.div
               key={i}
               className="proj-card glass-panel"
               initial={{ opacity: 0, y: 20 }}
@@ -33,7 +30,7 @@ export default function Blog({ data }) {
                 {post.date}
               </p>
               <p>{post.summary}</p>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>

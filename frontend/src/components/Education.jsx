@@ -4,9 +4,7 @@ export default function Education({ education }) {
   if (!education || education.length === 0) return null;
   return (
     <section className="wrap" id="education">
-      <Reveal className="eyebrow">
-        <span className="method get">GET</span> /education
-      </Reveal>
+
       <Reveal as="h2">Education</Reveal>
       <Reveal>
         {education.map((e) => (

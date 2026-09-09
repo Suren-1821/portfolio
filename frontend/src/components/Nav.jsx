@@ -1,22 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav>
+    <nav className={`modern-nav ${scrolled ? "scrolled" : ""}`}>
       <div className="wrap navbar">
-        <div className="logo">
+        <a href="#" className="logo">
           SR<span>.</span>dev
-        </div>
+        </a>
         
         {/* Desktop Links */}
         <div className="nav-links">
-          <a href="#stack">/stack</a>
-          <a href="#experience">/experience</a>
-          <a href="#projects">/projects</a>
-          <a href="#education">/education</a>
-          <a href="#contact">/contact</a>
+          <a href="#stack" className="nav-link">Stack</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#education" className="nav-link">Education</a>
+          <a href="#contact" className="nav-btn">Let's Talk</a>
         </div>
 
         {/* Mobile Hamburger Icon */}
@@ -32,13 +42,22 @@ export default function Nav() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
-        <a href="#stack" onClick={() => setIsOpen(false)}>/stack</a>
-        <a href="#experience" onClick={() => setIsOpen(false)}>/experience</a>
-        <a href="#projects" onClick={() => setIsOpen(false)}>/projects</a>
-        <a href="#education" onClick={() => setIsOpen(false)}>/education</a>
-        <a href="#contact" onClick={() => setIsOpen(false)}>/contact</a>
-      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            className="mobile-menu open"
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(12px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+          >
+            <a href="#stack" onClick={() => setIsOpen(false)}>Stack</a>
+            <a href="#experience" onClick={() => setIsOpen(false)}>Experience</a>
+            <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+            <a href="#education" onClick={() => setIsOpen(false)}>Education</a>
+            <a href="#contact" onClick={() => setIsOpen(false)} className="mobile-btn">Let's Talk</a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

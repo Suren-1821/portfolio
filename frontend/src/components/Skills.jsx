@@ -11,9 +11,7 @@ export default function Skills({ skills }) {
   if (!skills) return null;
   return (
     <section className="wrap" id="stack">
-      <Reveal className="eyebrow">
-        <span className="method get">GET</span> /stack
-      </Reveal>
+
       <Reveal as="h2">What I build with</Reveal>
       <Reveal as="p" className="section-sub">
         Color-coded by layer — the same way I organize a codebase.

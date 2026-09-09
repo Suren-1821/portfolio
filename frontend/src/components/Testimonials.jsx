@@ -6,10 +6,7 @@ export default function Testimonials({ data }) {
   return (
     <section id="testimonials" style={{ background: "var(--ink-2)" }}>
       <div className="wrap">
-        <div className="eyebrow">
-          <span className="method get">GET</span>
-          <span>/api/testimonials</span>
-        </div>
+
         <h2>Colleague & Client Reviews</h2>
         <p className="section-sub">
           Feedback from project managers and lead developers I've had the pleasure of working with.

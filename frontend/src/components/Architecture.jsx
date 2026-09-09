@@ -3,9 +3,7 @@ import Reveal from "./Reveal.jsx";
 export default function Architecture() {
   return (
     <section className="wrap">
-      <Reveal className="eyebrow">
-        <span className="method get">GET</span> /architecture
-      </Reveal>
+
       <Reveal as="h2">How data moves through what I build</Reveal>
       <Reveal as="p" className="section-sub">
         The typical shape of a project I ship: a React client, an Express API guarding routes with JWT and RBAC, and
